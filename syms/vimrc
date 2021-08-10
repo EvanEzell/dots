@@ -1,0 +1,161 @@
+" File Header {{{1 ------------------------------------------------------------
+" File: ~/.vimrc
+" Author: Evan C. Ezell (evanezell595<at>gmail<dot>com)
+" End File Header 1}}} --------------------------------------------------------
+" Vundle {{{1  ----------------------------------------------------------------
+" Vundle vim plugin package manager setup
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" vim plugins from GitHub repos
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'chrisbra/csv.vim'
+Plugin 'tpope/vim-fugitive'
+
+call vundle#end()
+filetype plugin indent on
+" End Vundle 1}}} -------------------------------------------------------------
+" Airline {{{1 ----------------------------------------------------------------
+" Airline status line / status line settings
+let g:airline#extensions#tabline#enabled = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ' :'
+let g:airline_symbols.maxlinenr = '☰ '
+" End Airline 1}}} ------------------------------------------------------------
+" Mappings {{{1 ---------------------------------------------------------------
+let mapleader="\<space>"
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :wq<cr>
+nnoremap <leader>Q :q!<cr>
+nnoremap <leader>s yiw:exe '%s/' . @" . '//g'<left><left><left>
+nnoremap <leader>p :!!<cr><cr>
+nnoremap <leader>l :set list!<cr>
+nnoremap <leader>n :set number!<cr>
+nnoremap <leader>r :set relativenumber!<cr>
+nnoremap <leader>P :set paste!<cr>
+nnoremap <leader>j ddp
+nnoremap <leader>k ddkP
+vnoremap <leader>j dp
+vnoremap <leader>k dkP
+nnoremap <leader>o o<esc>k
+nnoremap <leader>O O<esc>j
+nnoremap <leader>" ciw"<C-r>""<esc>
+vnoremap <leader>" c"<C-r>""<esc>
+nnoremap <leader>( ciw(<C-r>")<esc>
+vnoremap <leader>( c(<C-r>")<esc>
+nnoremap <leader>; ms$a;<esc>`s
+nnoremap <leader>t :tabn 
+" End Mappings 1}}} -----------------------------------------------------------
+" General {{{1 ----------------------------------------------------------------
+set encoding=utf-8
+
+" fold settings
+set foldlevel=99
+set foldmethod=marker
+
+" indentation related stuff
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+
+" file visualizations
+set number
+syntax on
+colorscheme default
+set colorcolumn=80
+highlight ColorColumn ctermbg=DarkGray
+
+" make it easier to exit mode
+inoremap jj <esc>
+cnoremap jj <esc>
+
+" quick code reindention
+noremap <F7> gg=G``
+
+" filename expansion
+set wildmenu
+
+" show line number and character number
+set ruler
+
+set noerrorbells
+set novisualbell
+" End General 1}}} ------------------------------------------------------------
+" Split-Screen {{{1 -----------------------------------------------------------
+nnoremap <silent> <C-h> :call WinMove('h')<cr>
+nnoremap <silent> <C-j> :call WinMove('j')<cr>
+nnoremap <silent> <C-k> :call WinMove('k')<cr>
+nnoremap <silent> <C-l> :call WinMove('l')<cr>
+
+function! WinMove(key) abort
+    let t:curwin = winnr()
+    exec "wincmd ".a:key
+    if (t:curwin == winnr())
+        if (match(a:key,'[jk]'))
+            wincmd v
+        else
+            wincmd s
+        endif
+        exec "wincmd ".a:key
+    endif
+endfunction
+" End Split-Screen 1}}} -------------------------------------------------------
+
+" mail signature
+inoremap #sig Evan Ezell<Enter>
+             \Email: evanezell595@gmail.com<Enter>
+             \Cell: 770.317.5977<esc>3k0
+
+" Language Specific Settings {{{1 ---------------------------------------------
+" R {{{2 ----------------------------------------------------------------------
+autocmd BufNewFile,BufRead *.R
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set autoindent |
+    \ set expandtab |
+    \ set fileformat=unix
+" End R 2}}} ------------------------------------------------------------------
+" Python {{{2 -----------------------------------------------------------------
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
+    \ set fdm=indent
+" End Python 2}}} -------------------------------------------------------------
+" C/C++ {{{2 ------------------------------------------------------------------
+autocmd Filetype c,cpp inoremap #i #include
+autocmd Filetype c,cpp inoremap #d #define
+" End C/C++ 2}}} --------------------------------------------------------------
+" Lisp-Like {{{2 --------------------------------------------------------------
+autocmd Filetype lisp set lisp
+autocmd BufReadPost,BufNewFile *.scm set filetype=lisp
+" End Lisp-Like 2}}} ----------------------------------------------------------
+" Makefile {{{2 ---------------------------------------------------------------
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
+" End Makefile 2}}} -----------------------------------------------------------
+" TypeScript {{{2 -------------------------------------------------------------
+autocmd BufReadPost,BufNewFile *.ts set filetype=typescript
+autocmd FileType typescript set softtabstop=2 shiftwidth=2
+" End TypeScript 2}}} ---------------------------------------------------------
+" End Language Specific Settings 1}}} -----------------------------------------

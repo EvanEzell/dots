@@ -1,0 +1,18 @@
+set bell-style none
+
+set editing-mode vi
+set show-mode-in-prompt on
+
+# change cursor style depending on vi mode (ins/cmd)
+set vi-ins-mode-string \1\e[6 q\2
+set vi-cmd-mode-string \1\e[2 q\2
+
+# vi key-bindings for readline
+set keymap vi-insert
+"jj": vi-movement-mode
+"\C-w": backward-kill-word
+RETURN: "\e\n"
+
+set keymap vi-command
+"gg": beginning-of-history
+"G": end-of-history

@@ -1,0 +1,41 @@
+# non-interactive mode {{{1 ---------------------------------------------------
+# no need to set up anything in non-interactive mode
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+# end non-interactive mode 1}}} -----------------------------------------------
+# imports {{{1 ----------------------------------------------------------------
+source ~/dots/bash/exports.sh
+source ~/dots/bash/aliases.sh
+source ~/dots/bash/colors.sh
+source ~/dots/bash/history.sh
+# end imports 1}}} ------------------------------------------------------------
+# prompt {{{1 -----------------------------------------------------------------
+PROMPT_STRING=(
+    "\n\[$LGRAY\]╔══► \[$RED\]\u\[$BLUE\]@\[$GREEN\]\h \[$LGRAY\]»"
+    "\[$BLUE\]\t \d \[$LGRAY\]» \[$GREEN\]\j job(s) \n\[$LGRAY\]╠═○"
+    "\[$CYAN\]\w \[$LGRAY\]♦\[$CYAN\]"
+    "\$((\$(/bin/ls -l . | wc -l) - 1)) files \[$LGRAY\]♦"
+    "\[$CYAN\]\$(find . -type f -maxdepth 1 -exec du -shc {} + | "
+    "tail -n 1 | awk '{ print \$1 }')b\n\[$LGRAY\]╚══► \[$NC\]"
+)
+PS1="${PROMPT_STRING[@]}"
+# end prompt 1}}} -------------------------------------------------------------
+# general {{{1 ----------------------------------------------------------------
+# check the window size after each command and
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# enable programmable completion
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+# end general 1}}} ------------------------------------------------------------
+# welcome message {{{1 --------------------------------------------------------
+echo -e "\nWelcome, $(whoami)!"
+# end welcome message 1}}} ----------------------------------------------------
