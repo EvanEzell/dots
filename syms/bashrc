@@ -35,6 +35,20 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+
+# start tmux and attach to current session if their is one
+if ! [ -x "tmux" ]; then
+  if [[ -z "$TMUX" ]] ;then
+    # get the id of a deattached session
+      ID="$( tmux ls | grep -vm1 attached | cut -d: -f1 )"
+      if [[ -z "$ID" ]] ;then # if not available create a new one
+          tmux new-session
+      else
+          tmux attach-session -t "$ID" # if available attach to it
+      fi
+  fi
+fi
 # end general 1}}} ------------------------------------------------------------
 # welcome message {{{1 --------------------------------------------------------
 echo -e "\nWelcome, $(whoami)!"
