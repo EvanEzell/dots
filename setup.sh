@@ -66,6 +66,7 @@ for i in "${FILE_ARRAY[@]}"; do
     SETUP_FILE="$SETUP_DIR/${i}_setup.sh"
     if [ -f $SETUP_FILE ]; then
         echo -e "$i: setup file exists: sourcing \\e[32m$SETUP_FILE\\e[39m"
+        source $SETUP_FILE
     else
         echo "$i: no setup file found"
     fi
