@@ -4,7 +4,7 @@ VUNDLE_DIR=~/.vim/bundle/Vundle.vim
 # environment 1}}} ------------------------------------------------------------
 # git check {{{1 --------------------------------------------------------------
 # check to make sure git is installed
-if [ -x "$(command -v git)" ]; then
+if [ ! -x "$(command -v git)" ]; then
     echo "Error: git is not installed." >&2
     exit 1
 fi
