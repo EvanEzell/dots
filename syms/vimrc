@@ -2,6 +2,9 @@
 " File: ~/.vimrc
 " Author: Evan C. Ezell (evanezell595<at>gmail<dot>com)
 " End File Header 1}}} --------------------------------------------------------
+" Imports {{{1 ----------------------------------------------------------------
+source ~/dots/vim/vim_functions.vim
+" End Imports 1}}} ------------------------------------------------------------
 " Vundle {{{1  ----------------------------------------------------------------
 " Vundle vim plugin package manager setup
 set nocompatible
@@ -98,19 +101,6 @@ nnoremap <silent> <C-h> :call WinMove('h')<cr>
 nnoremap <silent> <C-j> :call WinMove('j')<cr>
 nnoremap <silent> <C-k> :call WinMove('k')<cr>
 nnoremap <silent> <C-l> :call WinMove('l')<cr>
-
-function! WinMove(key) abort
-    let t:curwin = winnr()
-    exec "wincmd ".a:key
-    if (t:curwin == winnr())
-        if (match(a:key,'[jk]'))
-            wincmd v
-        else
-            wincmd s
-        endif
-        exec "wincmd ".a:key
-    endif
-endfunction
 " End Split-Screen 1}}} -------------------------------------------------------
 " Language Specific Settings {{{1 ---------------------------------------------
 " Text/Markdown {{{2 ----------------------------------------------------------
