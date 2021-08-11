@@ -17,7 +17,7 @@ PROMPT_STRING=(
     "\[$BLUE\]\t \d \[$LGRAY\]» \[$GREEN\]\j job(s) \n\[$LGRAY\]╠═○"
     "\[$CYAN\]\w \[$LGRAY\]♦\[$CYAN\]"
     "\$((\$(/bin/ls -l . | wc -l) - 1)) files \[$LGRAY\]♦"
-    "\[$CYAN\]\$(find . -type f -maxdepth 1 -exec du -shc {} + | "
+    "\[$CYAN\]\$(find . -maxdepth 1 -type f -exec du -shc {} + | "
     "tail -n 1 | awk '{ print \$1 }')b\n\[$LGRAY\]╚══► \[$NC\]"
 )
 PS1="${PROMPT_STRING[@]}"
