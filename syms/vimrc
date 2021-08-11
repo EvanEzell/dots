@@ -61,6 +61,13 @@ nnoremap <leader>( ciw(<C-r>")<esc>
 vnoremap <leader>( c(<C-r>")<esc>
 nnoremap <leader>; ms$a;<esc>`s
 nnoremap <leader>t :tabn 
+
+" make it easier to exit mode
+inoremap jj <esc>
+cnoremap jj <esc>
+
+" code reindention for whole file
+noremap <F7> gg=G``
 " End Mappings 1}}} -----------------------------------------------------------
 " General {{{1 ----------------------------------------------------------------
 set encoding=utf-8
@@ -83,21 +90,8 @@ colorscheme default
 set colorcolumn=80
 highlight ColorColumn ctermbg=DarkGray
 
-" make it easier to exit mode
-inoremap jj <esc>
-cnoremap jj <esc>
-
-" quick code reindention
-noremap <F7> gg=G``
-
-" filename expansion
-set wildmenu
-
-" show line number and character number
-set ruler
-
-set noerrorbells
-set novisualbell
+set wildmenu " filename expansion
+set belloff=all " no annoying bell
 " End General 1}}} ------------------------------------------------------------
 " Split-Screen {{{1 -----------------------------------------------------------
 nnoremap <silent> <C-h> :call WinMove('h')<cr>
@@ -156,10 +150,15 @@ autocmd Filetype lisp set lisp
 autocmd BufReadPost,BufNewFile *.scm set filetype=lisp
 " End Lisp-Like 2}}} ----------------------------------------------------------
 " Makefile {{{2 ---------------------------------------------------------------
-autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
+autocmd FileType make 
+    \ set noexpandtab |
+    \ set shiftwidth=8 |
+    \ set softtabstop=0
 " End Makefile 2}}} -----------------------------------------------------------
 " TypeScript {{{2 -------------------------------------------------------------
 autocmd BufReadPost,BufNewFile *.ts set filetype=typescript
-autocmd FileType typescript set softtabstop=2 shiftwidth=2
+autocmd FileType typescript 
+    \ set softtabstop=2 |
+    \ set shiftwidth=2
 " End TypeScript 2}}} ---------------------------------------------------------
 " End Language Specific Settings 1}}} -----------------------------------------
