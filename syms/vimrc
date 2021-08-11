@@ -94,7 +94,6 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=DarkGray
 
 set wildmenu " filename expansion
-set belloff=all " no annoying bell
 " End General 1}}} ------------------------------------------------------------
 " Split-Screen {{{1 -----------------------------------------------------------
 nnoremap <silent> <C-h> :call WinMove('h')<cr>
