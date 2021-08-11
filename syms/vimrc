@@ -118,13 +118,14 @@ function! WinMove(key) abort
     endif
 endfunction
 " End Split-Screen 1}}} -------------------------------------------------------
-
-" mail signature
-inoremap #sig Evan Ezell<Enter>
-             \Email: evanezell595@gmail.com<Enter>
-             \Cell: 770.317.5977<esc>3k0
-
 " Language Specific Settings {{{1 ---------------------------------------------
+" Text/Markdown {{{2 ----------------------------------------------------------
+autocmd BufNewFile,BufRead *.md,*.txt
+    \ set textwidth=79 |
+    \ inoremap #sig Evan Ezell<Enter>
+               \Email: evanezell595@gmail.com<Enter>
+               \Cell: 770.317.5977<esc>3k0
+" End Text/Markdown 2}}} ------------------------------------------------------
 " R {{{2 ----------------------------------------------------------------------
 autocmd BufNewFile,BufRead *.R
     \ set tabstop=2 |
@@ -146,8 +147,9 @@ au BufNewFile,BufRead *.py
     \ set fdm=indent
 " End Python 2}}} -------------------------------------------------------------
 " C/C++ {{{2 ------------------------------------------------------------------
-autocmd Filetype c,cpp inoremap #i #include
-autocmd Filetype c,cpp inoremap #d #define
+autocmd Filetype c,cpp 
+    \ inoremap #in #include |
+    \ inoremap #d #define
 " End C/C++ 2}}} --------------------------------------------------------------
 " Lisp-Like {{{2 --------------------------------------------------------------
 autocmd Filetype lisp set lisp
