@@ -30,6 +30,9 @@ alias dev='cd $HOME/dev'
 alias nebula='ssh ee0@gistnebula'
 alias hydra='ssh eezell3@hydra'
 # End SSH 2}}} ----------------------------------------------------------------
+# FZF {{{1 --------------------------------------------------------------------
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# End FZF 1}}} ----------------------------------------------------------------
 # Other {{{2 ------------------------------------------------------------------
 alias weather='curl wttr.in'
 alias python='python3'

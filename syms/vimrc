@@ -20,6 +20,10 @@ Plugin 'chrisbra/csv.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+if executable('fzf')
+    Plugin 'junegunn/fzf'
+endif
+Plugin 'airblade/vim-rooter'
 
 call vundle#end()
 filetype plugin indent on
