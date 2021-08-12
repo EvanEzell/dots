@@ -22,8 +22,9 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 if executable('fzf')
     Plugin 'junegunn/fzf'
+    Plugin 'junegunn/fzf.vim'
+    Plugin 'airblade/vim-rooter'
 endif
-Plugin 'airblade/vim-rooter'
 
 call vundle#end()
 filetype plugin indent on
