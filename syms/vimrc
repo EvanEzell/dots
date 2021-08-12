@@ -76,6 +76,14 @@ cnoremap jj <esc>
 
 " code reindention for whole file
 noremap <F7> gg=G``
+
+" search functions
+nnoremap <leader>f :FZF<cr>
+nnoremap <leader>a :Rg<cr>
+
+" set current working directory to home directory
+nnoremap <leader>c :cd<cr>
+nnoremap <leader>C :cd -<cr>
 " End Mappings 1}}} -----------------------------------------------------------
 " General {{{1 ----------------------------------------------------------------
 set encoding=utf-8
