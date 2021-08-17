@@ -19,14 +19,13 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'chrisbra/csv.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'preservim/nerdcommenter'
 Plugin 'plasticboy/vim-markdown'
 if executable('fzf')
     Plugin 'junegunn/fzf'
     Plugin 'junegunn/fzf.vim'
     Plugin 'airblade/vim-rooter'
 endif
-Plugin 'preservim/nerdcommenter'
 
 call vundle#end()
 filetype plugin indent on
