@@ -4,18 +4,15 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null 2>&1 && pwd )"
 SYM_DIR=$DIR/syms
 SETUP_DIR=$DIR/setup
 OLD_DOTS=~/dots_backup_"`date +"%s"`"
+DEFAULT_FILES=($(cat $DIR/config_files.txt))
 # end environment 1}}} --------------------------------------------------------
 # file array {{{1 -------------------------------------------------------------
 # can pass files to setup or program will use default files
-DEFAULT_FILES=('bashrc' 'vimrc' 'inputrc' 'tmux.conf')
 if [ "$#" -gt 0 ]; then
     FILE_ARRAY=("$@")
 else
     echo "no arguments given, setting up default config files"
-    FILE_ARRAY=('bashrc' 'vimrc' 'inputrc' 'tmux.conf')
-fi
-if [[ "$FILE_ARRAY" == "" ]]; then
-    declare -a FILE_ARRAY=('bashrc' 'vimrc' 'inputrc' 'tmux.conf')
+    FILE_ARRAY=(${DEFAULT_FILES[@]})
 fi
 # end file array 1}}} ---------------------------------------------------------
 # move_sym function {{{1 ------------------------------------------------------
