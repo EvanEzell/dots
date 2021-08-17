@@ -26,6 +26,7 @@ if executable('fzf')
     Plugin 'junegunn/fzf.vim'
     Plugin 'airblade/vim-rooter'
 endif
+Plugin 'preservim/nerdcommenter'
 
 call vundle#end()
 filetype plugin indent on
