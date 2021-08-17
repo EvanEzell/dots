@@ -71,6 +71,12 @@ vnoremap <leader>( c(<C-r>")<esc>
 nnoremap <leader>; ms$a;<esc>`s
 nnoremap <leader>t :tabn 
 
+" move down/up a display line
+noremap j gj
+noremap k gk
+vnoremap j gj
+vnoremap k gk
+
 " make it easier to exit mode
 inoremap jj <esc>
 cnoremap jj <esc>
