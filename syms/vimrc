@@ -19,6 +19,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'chrisbra/csv.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'plasticboy/vim-markdown'
 if executable('fzf')
     Plugin 'junegunn/fzf'
