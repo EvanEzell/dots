@@ -1,0 +1,4 @@
+bashrc
+vimrc
+inputrc
+tmux.conf
