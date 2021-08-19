@@ -9,11 +9,11 @@ run, there is no need to run it again. Changes to individual configuration
 files can be made directly in the `syms/<filename>` file and changes will be
 reflected because the files are appropriately sym linked.
 
-If no arguments are passed to `setup.sh` then it will set up the file(s) in
-`DEFAULT_FILES`. If filenames are passed as arguments, it will set up only the
-files for which the filenames were passed. At the end of the script, `setup.sh`
-will run file specific setups for each file in the `setup` directory, if a
-setup file exists (see below).
+If no arguments are passed to `setup.sh` then it will set up the file(s) listed
+in `config_files.txt`. If filenames are passed as arguments, it will set up
+only the files for which the filenames were passed. At the end of the script,
+`setup.sh` will run file specific setups for each file in the `setup`
+directory, if a setup file exists (see below).
 
 ## setup directory
 The setup directory contains scripts that need to be run on a new machine
@@ -30,3 +30,8 @@ I tried to make my configuration files as modular as possible by creating
 individual files for logical sections and importing those individual files
 within the actual configuration file. This keeps everything nicely laid out. I
 made a directory for each of the configuration files that have imported files.
+
+## uninstall.sh
+If no arguments are passed to `uninstall.sh` then it will remove sym links of
+config files found in `config_files.txt`. If filenames are passed as arguments,
+it will remove sym links only the files for which the filenames were passed. 
