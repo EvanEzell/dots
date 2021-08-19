@@ -62,10 +62,10 @@ echo -e "checking for setup scripts in $SETUP_DIR\n"
 for i in "${FILE_ARRAY[@]}"; do
     SETUP_FILE="$SETUP_DIR/${i}_setup.sh"
     if [ -f $SETUP_FILE ]; then
-        echo -e "$i: setup file exists: sourcing \\e[32m$SETUP_FILE\\e[39m"
+        echo -e "\\e[32m$i\\e[39m: setup file exists: sourcing \\e[32m$SETUP_FILE\\e[39m"
         source $SETUP_FILE
     else
-        echo "$i: no setup file found"
+        echo -e "\\e[0;31m$i\\e[39m: no setup file found"
     fi
 done
 # end setup scripts 1}}} ------------------------------------------------------

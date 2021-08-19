@@ -8,7 +8,7 @@ DEFAULT_FILES=($(cat $DIR/config_files.txt))
 if [ "$#" -gt 0 ]; then
     FILE_ARRAY=("$@")
 else
-    echo "no arguments given, setting up default config files"
+    echo "no filename arguments given, using default config files"
     FILE_ARRAY=(${DEFAULT_FILES[@]})
 fi
 # end file array 1}}} ---------------------------------------------------------
