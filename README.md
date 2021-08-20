@@ -34,4 +34,5 @@ made a directory for each of the configuration files that have imported files.
 ## uninstall.sh
 If no arguments are passed to `uninstall.sh` then it will remove sym links of
 config files found in `config_files.txt`. If filenames are passed as arguments,
-it will remove sym links only the files for which the filenames were passed. 
+it will remove sym links for only the files for which the filenames were
+passed. 
