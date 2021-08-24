@@ -42,10 +42,11 @@ if ! [ -x "tmux" ]; then
   if [[ -z "$TMUX" ]] ;then
     # get the id of a deattached session
       ID="$( tmux ls | grep -vm1 attached | cut -d: -f1 )"
-      if [[ -z "$ID" ]] ;then # if not available create a new one
+      if [[ -z "$ID" ]] ;then # if not available create a new session
           tmux new-session
       else
-          tmux attach-session -t "$ID" # if available attach to it
+          # if available attach and create new window
+          tmux attach-session -t "$ID" \; new-window
       fi
   fi
 fi
