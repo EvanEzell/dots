@@ -36,3 +36,7 @@ If no arguments are passed to `uninstall.sh` then it will remove sym links of
 config files found in `config_files.txt`. If filenames are passed as arguments,
 it will remove sym links for only the files for which the filenames were
 passed. 
+
+## other directory
+The other directory contains additional setup files that aren't run
+automatically.
