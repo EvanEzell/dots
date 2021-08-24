@@ -37,7 +37,7 @@ alias hydra='ssh eezell3@hydra'
 alias weather='curl wttr.in'
 alias python='python3'
 alias brewi='brew install'
-
+alias tt='watson'
 # if file .bash_aliases exists, respect them also
 if [ -f ~/.bash_aliases ]; then
   source ~/.bash_aliases
