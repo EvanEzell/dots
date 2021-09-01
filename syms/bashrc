@@ -50,6 +50,11 @@ if ! [ -x "tmux" ]; then
       fi
   fi
 fi
+
+# setup python environment if pyenv is installed
+if command -v pyenv >> /dev/null; then
+    eval "$(pyenv init -)"
+fi
 # end general 1}}} ------------------------------------------------------------
 # welcome message {{{1 --------------------------------------------------------
 echo -e "\nWelcome, $(whoami)!"
