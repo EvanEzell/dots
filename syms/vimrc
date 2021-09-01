@@ -152,8 +152,9 @@ au BufNewFile,BufRead *.py
 " End Python 2}}} -------------------------------------------------------------
 " C/C++ {{{2 ------------------------------------------------------------------
 autocmd Filetype c,cpp 
-    \ inoremap #in #include |
-    \ inoremap #d #define
+    \ iabbrev #in@ #include |
+    \ iabbrev #de@ #define |
+    \ iabbrev #if@ #ifndef 
 " End C/C++ 2}}} --------------------------------------------------------------
 " Lisp-Like {{{2 --------------------------------------------------------------
 autocmd Filetype lisp set lisp
