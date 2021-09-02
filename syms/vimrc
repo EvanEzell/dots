@@ -115,6 +115,9 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=DarkGray
 
 set wildmenu " filename expansion
+
+iabbrev name@ Evan C. Ezell
+iabbrev @@ evanezell595@gmail.com
 " End General 1}}} ------------------------------------------------------------
 " Split-Screen {{{1 -----------------------------------------------------------
 nnoremap <silent> <C-h> :call WinMove('h')<cr>
@@ -126,9 +129,9 @@ nnoremap <silent> <C-l> :call WinMove('l')<cr>
 " Text/Markdown {{{2 ----------------------------------------------------------
 autocmd BufNewFile,BufRead *.md,*.txt
     \ set textwidth=79 |
-    \ inoremap #sig Evan Ezell<Enter>
-               \Email: evanezell595@gmail.com<Enter>
-               \Cell: 770.317.5977<esc>3k0
+    \ iabbrev sig@ Evan Ezell<Enter>
+                  \Email: evanezell595@gmail.com<Enter>
+                  \Cell: 770.317.5977
 " End Text/Markdown 2}}} ------------------------------------------------------
 " R {{{2 ----------------------------------------------------------------------
 autocmd BufNewFile,BufRead *.R
