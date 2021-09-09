@@ -115,6 +115,7 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=DarkGray
 
 set wildmenu " filename expansion
+set mouse=a " mouse scrolling
 
 iabbrev name@ Evan C. Ezell
 iabbrev @@ evanezell595@gmail.com
