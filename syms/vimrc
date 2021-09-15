@@ -26,6 +26,8 @@ if executable('fzf')
     Plugin 'junegunn/fzf.vim'
     Plugin 'airblade/vim-rooter'
 endif
+Plugin 'luochen1990/rainbow'
+let g:rainbow_active = 1
 
 call vundle#end()
 filetype plugin indent on
@@ -162,7 +164,9 @@ autocmd Filetype c,cpp
 " End C/C++ 2}}} --------------------------------------------------------------
 " Lisp-Like {{{2 --------------------------------------------------------------
 autocmd Filetype lisp set lisp
-autocmd BufReadPost,BufNewFile *.scm set filetype=lisp
+autocmd BufReadPost,BufNewFile *.scm 
+    \ set filetype=lisp |
+    \ let g:rainbow_active = 1
 " End Lisp-Like 2}}} ----------------------------------------------------------
 " Makefile {{{2 ---------------------------------------------------------------
 autocmd FileType make 
