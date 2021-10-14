@@ -129,6 +129,10 @@ nnoremap <silent> <C-k> :call WinMove('k')<cr>
 nnoremap <silent> <C-l> :call WinMove('l')<cr>
 " End Split-Screen 1}}} -------------------------------------------------------
 " Language Specific Settings {{{1 ---------------------------------------------
+" All files {{{2 --------------------------------------------------------------
+autocmd BufWritePre *
+    \ %s/\s\+$//g
+" End All files 2}}} ----------------------------------------------------------
 " Text/Markdown {{{2 ----------------------------------------------------------
 autocmd BufNewFile,BufRead *.md,*.txt
     \ set textwidth=79 |
