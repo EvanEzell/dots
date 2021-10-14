@@ -71,7 +71,7 @@ vnoremap <leader>" c"<C-r>""<esc>
 nnoremap <leader>( ciw(<C-r>")<esc>
 vnoremap <leader>( c(<C-r>")<esc>
 nnoremap <leader>; ms$a;<esc>`s
-nnoremap <leader>t :tabn 
+nnoremap <leader>t :tabn
 
 " move down/up a display line
 noremap j gj
@@ -157,26 +157,26 @@ au BufNewFile,BufRead *.py
     \ set fdm=indent
 " End Python 2}}} -------------------------------------------------------------
 " C/C++ {{{2 ------------------------------------------------------------------
-autocmd Filetype c,cpp 
+autocmd Filetype c,cpp
     \ iabbrev #in@ #include |
     \ iabbrev #de@ #define |
-    \ iabbrev #if@ #ifndef 
+    \ iabbrev #if@ #ifndef
 " End C/C++ 2}}} --------------------------------------------------------------
 " Lisp-Like {{{2 --------------------------------------------------------------
 autocmd Filetype lisp set lisp
-autocmd BufReadPost,BufNewFile *.scm 
+autocmd BufReadPost,BufNewFile *.scm
     \ set filetype=lisp |
     \ let g:rainbow_active = 1
 " End Lisp-Like 2}}} ----------------------------------------------------------
 " Makefile {{{2 ---------------------------------------------------------------
-autocmd FileType make 
+autocmd FileType make
     \ set noexpandtab |
     \ set shiftwidth=8 |
     \ set softtabstop=0
 " End Makefile 2}}} -----------------------------------------------------------
 " TypeScript {{{2 -------------------------------------------------------------
 autocmd BufReadPost,BufNewFile *.ts set filetype=typescript
-autocmd FileType typescript 
+autocmd FileType typescript
     \ set softtabstop=2 |
     \ set shiftwidth=2
 " End TypeScript 2}}} ---------------------------------------------------------
