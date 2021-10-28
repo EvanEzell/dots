@@ -145,24 +145,23 @@ autocmd BufNewFile,BufRead *.md,*.txt
 " End Text/Markdown 2}}} ------------------------------------------------------
 " R {{{2 ----------------------------------------------------------------------
 autocmd BufNewFile,BufRead *.R
-    \ set tabstop=2 |
-    \ set softtabstop=2 |
-    \ set shiftwidth=2 |
-    \ set autoindent |
-    \ set expandtab |
-    \ set fileformat=unix
+    \ setlocal tabstop=2 |
+    \ setlocal softtabstop=2 |
+    \ setlocal shiftwidth=2 |
+    \ setlocal autoindent |
+    \ setlocal expandtab |
+    \ setlocal fileformat=unix
 " End R 2}}} ------------------------------------------------------------------
 " Python {{{2 -----------------------------------------------------------------
 au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix
-"|
-"    \ set foldmethod=indent
+    \ setlocal tabstop=4 |
+    \ setlocal softtabstop=4 |
+    \ setlocal shiftwidth=4 |
+    \ setlocal textwidth=79 |
+    \ setlocal expandtab |
+    \ setlocal autoindent |
+    \ setlocal fileformat=unix |
+    \ setlocal foldmethod=indent
 " End Python 2}}} -------------------------------------------------------------
 " C/C++ {{{2 ------------------------------------------------------------------
 autocmd Filetype c,cpp
@@ -178,14 +177,14 @@ autocmd BufReadPost,BufNewFile *.scm
 " End Lisp-Like 2}}} ----------------------------------------------------------
 " Makefile {{{2 ---------------------------------------------------------------
 autocmd FileType make
-    \ set noexpandtab |
-    \ set shiftwidth=8 |
-    \ set softtabstop=0
+    \ setlocal noexpandtab |
+    \ setlocal shiftwidth=8 |
+    \ setlocal softtabstop=0
 " End Makefile 2}}} -----------------------------------------------------------
 " TypeScript {{{2 -------------------------------------------------------------
 autocmd BufReadPost,BufNewFile *.ts set filetype=typescript
 autocmd FileType typescript
-    \ set softtabstop=2 |
-    \ set shiftwidth=2
+    \ setlocal softtabstop=2 |
+    \ setlocal shiftwidth=2
 " End TypeScript 2}}} ---------------------------------------------------------
 " End Language Specific Settings 1}}} -----------------------------------------
