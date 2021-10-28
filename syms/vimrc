@@ -94,6 +94,9 @@ nnoremap <leader>a :Rg<cr>
 nnoremap <leader>c :cd<cr>
 nnoremap <leader>C :cd -<cr>
 nnoremap <leader>d :pwd<cr>
+
+" open vimrc in new tab
+nnoremap <leader>v :tabe ~/.vimrc<cr>
 " End Mappings 1}}} -----------------------------------------------------------
 " General {{{1 ----------------------------------------------------------------
 set encoding=utf-8
@@ -131,7 +134,7 @@ nnoremap <silent> <C-l> :call WinMove('l')<cr>
 " Language Specific Settings {{{1 ---------------------------------------------
 " All files {{{2 --------------------------------------------------------------
 autocmd BufWritePre *
-    \ %s/\s\+$//g
+    \ silent! %s/\s\+$//g
 " End All files 2}}} ----------------------------------------------------------
 " Text/Markdown {{{2 ----------------------------------------------------------
 autocmd BufNewFile,BufRead *.md,*.txt
@@ -157,8 +160,9 @@ au BufNewFile,BufRead *.py
     \ set textwidth=79 |
     \ set expandtab |
     \ set autoindent |
-    \ set fileformat=unix |
-    \ set fdm=indent
+    \ set fileformat=unix
+"|
+"    \ set foldmethod=indent
 " End Python 2}}} -------------------------------------------------------------
 " C/C++ {{{2 ------------------------------------------------------------------
 autocmd Filetype c,cpp
