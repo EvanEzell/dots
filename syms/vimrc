@@ -134,7 +134,7 @@ nnoremap <silent> <C-l> :call WinMove('l')<cr>
 " Language Specific Settings {{{1 ---------------------------------------------
 " All files {{{2 --------------------------------------------------------------
 autocmd BufWritePre *
-    \ silent! %s/\s\+$//g
+    \ %s/\s\+$//ge
 " End All files 2}}} ----------------------------------------------------------
 " Text/Markdown {{{2 ----------------------------------------------------------
 autocmd BufNewFile,BufRead *.md,*.txt
