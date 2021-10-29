@@ -52,6 +52,7 @@ let g:airline_symbols.maxlinenr = '☰ '
 " Mappings {{{1 ---------------------------------------------------------------
 let mapleader="\<space>"
 nnoremap <leader>w :w<cr>
+nnoremap <leader>W :wa<cr>
 nnoremap <leader>q :wq<cr>
 nnoremap <leader>Q :q!<cr>
 nnoremap <leader>s yiw:exe '%s/' . @" . '//g'<left><left><left>
