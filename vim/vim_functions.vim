@@ -1,5 +1,10 @@
 " custom vim functions
-
+" cd to git-dir {{{1 ----------------------------------------------------------
+function! GitDir()
+    let l:git_dir = system('git rev-parse --show-toplevel')
+    exec "cd " . l:git_dir
+endfunction
+" end cd to git-dir 1}}} ------------------------------------------------------
 " move window {{{1 ------------------------------------------------------------
 function! WinMove(key) abort
     let t:curwin = winnr()

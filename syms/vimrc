@@ -95,6 +95,7 @@ nnoremap <leader>a :Rg<cr>
 nnoremap <leader>c :cd<cr>
 nnoremap <leader>C :cd -<cr>
 nnoremap <leader>d :pwd<cr>
+nnoremap <leader>g :call GitDir()<cr>
 
 " open vimrc in new tab
 nnoremap <leader>v :tabe ~/.vimrc<cr>
