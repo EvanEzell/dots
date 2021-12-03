@@ -24,7 +24,8 @@ alias l="ls -CF $LS_OPTS"
 alias dco='docker-compose'
 # End Docker 2}}} -------------------------------------------------------------
 # Directories {{{2 ------------------------------------------------------------
-alias dev='cd $HOME/dev'
+alias dev='cd $HOME/dev/work/'
+alias diss='cd $HOME/dev/work/dissertation/'
 # End Directories 2}}} --------------------------------------------------------
 # SSH {{{2 --------------------------------------------------------------------
 alias nebula='ssh ee0@gistnebula'
