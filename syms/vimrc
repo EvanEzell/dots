@@ -90,6 +90,7 @@ noremap <F7> gg=G``
 " search functions
 nnoremap <leader>f :FZF<cr>
 nnoremap <leader>a :Rg<cr>
+imap <c-x><c-f> <plug>(fzf-complete-path)
 
 " directory maps
 nnoremap <leader>c :cd<cr>
