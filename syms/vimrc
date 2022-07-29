@@ -72,7 +72,7 @@ vnoremap <leader>" c"<C-r>""<esc>
 nnoremap <leader>( ciw(<C-r>")<esc>
 vnoremap <leader>( c(<C-r>")<esc>
 nnoremap <leader>; ms$a;<esc>`s
-nnoremap <leader>t :tabn
+nnoremap <leader>t :tabn<cr>
 
 " move down/up a display line
 noremap j gj
