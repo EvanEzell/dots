@@ -56,6 +56,7 @@ nnoremap <leader>W :wa<cr>
 nnoremap <leader>q :wq<cr>
 nnoremap <leader>Q :q!<cr>
 nnoremap <leader>s yiw:exe '%s/' . @" . '//g'<left><left><left>
+nnoremap <leader>S :source ~/.vimrc<cr>
 nnoremap <leader>p :!!<cr><cr>
 nnoremap <leader>l :set list!<cr>
 nnoremap <leader>n :set number!<cr>
@@ -170,7 +171,8 @@ au BufNewFile,BufRead *.py
 autocmd Filetype c,cpp
     \ iabbrev #in@ #include |
     \ iabbrev #de@ #define |
-    \ iabbrev #if@ #ifndef
+    \ iabbrev #if@ #ifndef |
+    \ iabbrev #en@ #endif
 " End C/C++ 2}}} --------------------------------------------------------------
 " Lisp-Like {{{2 --------------------------------------------------------------
 autocmd Filetype lisp set lisp
