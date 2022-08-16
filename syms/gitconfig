@@ -1,0 +1,39 @@
+[user]
+	name = Evan C. Ezell
+	email = evanezell595@gmail.com
+        username = EvanEzell
+[github]
+        user = EvanEzell
+[init]
+        defaultBranch = master
+[core]
+        editor = vim
+[alias]
+        a = add --all
+        ai = add -i
+        ################
+        b = branch
+        ################
+        c = commit
+        ca = commit -a
+        cam = commit -am
+        ################
+        cl = clone
+        ################
+        d = diff
+        ################
+        f = fetch
+        fo = fetch origin
+        fu = fetch upstream
+        ################
+	pl = pull
+        ################
+        r = remote
+        ra = remote add
+        ################
+        s = status
+        ################
+        t = tag
+        t = tag -d
+[credential]
+	helper = store
