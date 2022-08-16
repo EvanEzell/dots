@@ -16,5 +16,5 @@ export GZIP_OPT=-9
 export TERM=xterm-256color
 
 # secret exports
-source ~/secrets/mutt.sh
+source ~dots/secrets/mutt.sh
 # end exports 1}}} ------------------------------------------------------------
