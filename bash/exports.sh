@@ -14,4 +14,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 export GZIP_OPT=-9
 export TERM=xterm-256color
+
+# secret exports
+source ~/secrets/mutt.sh
 # end exports 1}}} ------------------------------------------------------------

@@ -1,5 +1,6 @@
 bashrc
+gitconfig
 inputrc
+muttrc
 tmux.conf
 vimrc
-gitconfig

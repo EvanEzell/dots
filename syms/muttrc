@@ -1,0 +1,26 @@
+set from = "evanezell595@gmail.com"
+set realname = "Evan Ezell"
+
+set mark_old=no
+
+# IMAP settings
+set imap_user = "evanezell595@gmail.com"
+set imap_pass = $MUTT_PASSWORD
+
+# SMTP settings
+set smtp_url = "smtps://evanezell595@smtp.gmail.com"
+set smtp_pass = $MUTT_PASSWORD
+
+# Remote Gmail folders
+set folder = "imaps://imap.gmail.com/"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+set trash = "+[Gmail]/Trash"
+
+# key bindings
+bind index G imap-fetch-mail
+
+# macros
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
