@@ -16,6 +16,7 @@
         ################
         c = commit
         ca = commit -a
+        cm = commit -m
         cam = commit -am
         ################
         cl = clone
