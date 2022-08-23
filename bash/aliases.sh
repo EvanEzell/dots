@@ -1,5 +1,18 @@
 # Aliases {{{1 ----------------------------------------------------------------
+# Editor {{{2 -----------------------------------------------------------------
+alias vi='vim'
+# Editor 2}}} ------------------------------------------------------------------
 # RegEx {{{2 ------------------------------------------------------------------
+alias grep='grep --color=auto'
+alias agrep='agrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+# RegEx 2}}} ------------------------------------------------------------------
+alias grep='grep --color=auto'
+alias agrep='agrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+# RegEx 2}}} ------------------------------------------------------------------
 alias grep='grep --color=auto'
 alias agrep='agrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -24,7 +37,7 @@ alias l="ls -CF $LS_OPTS"
 alias dco='docker-compose'
 # End Docker 2}}} -------------------------------------------------------------
 # Files {{{2 ------------------------------------------------------------------
-alias words='vi ~/dev/personal/words.txt'
+alias words='vim ~/dev/personal/words.txt'
 # End Files 2}}} --------------------------------------------------------------
 # Directories {{{2 ------------------------------------------------------------
 alias dev='cd $HOME/dev/work/'
