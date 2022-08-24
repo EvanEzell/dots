@@ -8,6 +8,7 @@ esac
 # imports {{{1 ----------------------------------------------------------------
 source ~/dots/bash/exports.sh
 source ~/dots/bash/aliases.sh
+source ~/.aliases
 source ~/dots/bash/colors.sh
 source ~/dots/bash/history.sh
 # end imports 1}}} ------------------------------------------------------------
