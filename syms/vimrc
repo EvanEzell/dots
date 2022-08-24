@@ -104,6 +104,7 @@ nnoremap <leader>v :tabe ~/.vimrc<cr>
 " End Mappings 1}}} -----------------------------------------------------------
 " General {{{1 ----------------------------------------------------------------
 set encoding=utf-8
+set relativenumber
 
 " fold settings
 set foldlevel=99
