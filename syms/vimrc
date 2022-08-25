@@ -21,6 +21,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 Plugin 'preservim/nerdcommenter'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'universal-ctags/ctags'
 if executable('fzf')
     Plugin 'junegunn/fzf'
     Plugin 'junegunn/fzf.vim'
