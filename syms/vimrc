@@ -60,8 +60,7 @@ nnoremap <leader>s yiw:exe '%s/' . @" . '//g'<left><left><left>
 nnoremap <leader>S :source ~/.vimrc<cr>
 nnoremap <leader>p :!!<cr><cr>
 nnoremap <leader>l :set list!<cr>
-nnoremap <leader>n :set number!<cr>
-nnoremap <leader>r :set relativenumber!<cr>
+nnoremap <leader>n :set relativenumber!<cr>
 nnoremap <leader>P :set paste!<cr>
 nnoremap <leader>j ddp
 nnoremap <leader>k ddkP
@@ -105,7 +104,6 @@ nnoremap <leader>v :tabe ~/.vimrc<cr>
 " End Mappings 1}}} -----------------------------------------------------------
 " General {{{1 ----------------------------------------------------------------
 set encoding=utf-8
-set relativenumber
 
 " fold settings
 set foldlevel=99
@@ -119,7 +117,7 @@ set expandtab
 set autoindent
 
 " file visualizations
-set number
+set relativenumber
 syntax on
 colorscheme default
 set colorcolumn=80
