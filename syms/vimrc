@@ -60,7 +60,8 @@ nnoremap <leader>s yiw:exe '%s/' . @" . '//g'<left><left><left>
 nnoremap <leader>S :source ~/.vimrc<cr>
 nnoremap <leader>p :!!<cr><cr>
 nnoremap <leader>l :set list!<cr>
-nnoremap <leader>n :set relativenumber!<cr>
+nnoremap <leader>n :set norelativenumber <bar> :set nonumber<cr>
+nnoremap <leader>r :set number <bar> set relativenumber!<cr>
 nnoremap <leader>P :set paste!<cr>
 nnoremap <leader>j ddp
 nnoremap <leader>k ddkP
