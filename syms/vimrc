@@ -75,8 +75,9 @@ nnoremap <leader>( ciw(<C-r>")<esc>
 vnoremap <leader>( c(<C-r>")<esc>
 nnoremap <leader>; ms$a;<esc>`s
 nnoremap <leader>t :tabn<cr>
-nnoremap <leader>' "+
-vnoremap <leader>' "+
+nnoremap <leader>c "+
+vnoremap <leader>c "+
+nnoremap <leader>C msHmhgg"+yG`hzt`s
 
 " move down/up a display line
 noremap j gj
@@ -97,8 +98,8 @@ nnoremap <leader>a :Rg<cr>
 imap <c-x><c-f> <plug>(fzf-complete-path)
 
 " directory maps
-nnoremap <leader>c :cd<cr>
-nnoremap <leader>C :cd -<cr>
+"nnoremap <leader>c :cd<cr>
+"nnoremap <leader>C :cd -<cr>
 nnoremap <leader>d :pwd<cr>
 nnoremap <leader>g :call GitDir()<cr>
 
