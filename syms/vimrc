@@ -59,7 +59,7 @@ nnoremap <leader>Q :q!<cr>
 nnoremap <leader>s yiw:exe '%s/' . @" . '//g'<left><left><left>
 nnoremap <leader>S :source ~/.vimrc<cr>
 nnoremap <leader>p :!!<cr><cr>
-nnoremap <leader>L :set list!<cr>
+nnoremap <leader>l :set list!<cr>
 nnoremap <leader>n :set norelativenumber <bar> set nonumber<cr>
 nnoremap <leader>r :set number <bar> set relativenumber!<cr>
 nnoremap <leader>P :set paste!<cr>
@@ -76,24 +76,25 @@ vnoremap <leader>( c(<C-r>")<esc>
 nnoremap <leader>; ms$a;<esc>`s
 nnoremap <leader>t :tabn<cr>
 nnoremap <leader>z "+
-vnoremap <leader>z "+
+vnoremap <leader>z "+y
 nnoremap <leader>Z msHmhgg"+yG`hzt`s
+nnoremap <leader>x "+p
 
-nnoremap gl :ls<CR>
-nnoremap gp :bp<CR>
-nnoremap gn :bn<CR>
+nnoremap gl :ls<cr>
+nnoremap gp :bp<cr>
+nnoremap gn :bn<cr>
 nnoremap gd :w <bar> bd<cr>
 nnoremap gD :bd!<cr>
-nnoremap <leader>1 :1b<CR>
-nnoremap <leader>2 :2b<CR>
-nnoremap <leader>3 :3b<CR>
-nnoremap <leader>4 :4b<CR>
-nnoremap <leader>5 :5b<CR>
-nnoremap <leader>6 :6b<CR>
-nnoremap <leader>7 :7b<CR>
-nnoremap <leader>8 :8b<CR>
-nnoremap <leader>9 :9b<CR>
-nnoremap <leader>0 :10b<CR>
+nnoremap <leader>1 :1b<cr>
+nnoremap <leader>2 :2b<cr>
+nnoremap <leader>3 :3b<cr>
+nnoremap <leader>4 :4b<cr>
+nnoremap <leader>5 :5b<cr>
+nnoremap <leader>6 :6b<cr>
+nnoremap <leader>7 :7b<cr>
+nnoremap <leader>8 :8b<cr>
+nnoremap <leader>9 :9b<cr>
+nnoremap <leader>0 :10b<cr>
 
 " move down/up a display line
 noremap j gj
