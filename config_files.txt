@@ -4,3 +4,4 @@ inputrc
 muttrc
 tmux.conf
 vimrc
+bash_profile
