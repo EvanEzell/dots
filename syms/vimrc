@@ -80,6 +80,8 @@ vnoremap <leader>z "+y
 nnoremap <leader>Z msHmhgg"+yG`hzt`s
 nnoremap <leader>x "+p
 
+xnoremap <leader>p "_dP
+
 nnoremap gl :ls<cr>
 nnoremap gp :bp<cr>
 nnoremap gn :bn<cr>
@@ -141,7 +143,7 @@ set autoindent
 set number
 set relativenumber
 syntax on
-colorscheme default
+colorscheme industry
 set colorcolumn=80
 highlight ColorColumn ctermbg=DarkGray
 
